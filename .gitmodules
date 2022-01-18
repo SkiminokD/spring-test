@@ -1,0 +1,6 @@
+[submodule "multiplication"]
+	path = multiplication
+	url = git@github.com:SkiminokD/spring-test-app.git
+[submodule "frontend"]
+	path = frontend
+	url = git@github.com:SkiminokD/spring-test-frontend.git
