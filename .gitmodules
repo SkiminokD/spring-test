@@ -4,3 +4,6 @@
 [submodule "frontend"]
 	path = frontend
 	url = git@github.com:SkiminokD/spring-test-frontend.git
+[submodule "gamification"]
+	path = gamification
+	url = git@github.com:SkiminokD/spring-test-gamification.git
