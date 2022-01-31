@@ -37,7 +37,7 @@
 * Java 17
 * NodeJS 12 или новее
 * RabbitMQ
-* Consul
+* [Consul](https://www.consul.io/downloads)
 
 Для работы приложение использует следующие порты:
 * 8000 порт для сервиса gateway
@@ -52,6 +52,24 @@
 Для работы базы данных в домашней директории пользователя, от чьего имени запускается бэкенд, будут созданы базы данных multiplication3 и gamification. 
 Соответственно, посторонние одноименные файлы multiplication3.mv.db, multiplication3.trace.db, gamification.mv.db перед первым запуском должны отсутствовать в домашней директории пользователя.
 В качестве discovery-сервиса используется [Consul](https://www.consul.io/downloads).
+
+В качестве сервера централизованной конфигурации используется также [Consul](https://www.consul.io/downloads). Перед первым запуском необходимо создать на сервере конфигрурации дефолтные конфигурации.
+Для этого необходимо:
+1. Запустить Consul: `consul agent -node=learnmicro -dev`
+2. Открыть панель администрирования: http://localhost:8500/
+3. Создать две конфигурации
+- config/defaults/application.yml с содержимым:
+```yaml
+logging:
+  level:
+    org.springframework.core.env: DEBUG
+```
+- config/defaults,production/application.yml с содержимым:
+```yaml
+logging:
+  level:
+    org.springframework.core.env: INFO
+```
 
 # Запуск приложения
 
