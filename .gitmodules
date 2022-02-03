@@ -10,3 +10,6 @@
 [submodule "gateway"]
 	path = gateway
 	url = git@github.com:SkiminokD/spring-test-gateway.git
+[submodule "logs"]
+	path = logs
+	url = git@github.com:SkiminokD/spring-test-logs.git
